@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.a.dao.UserDao">
+    <select id="getUser" resultType="com.a.domain.User" >
+        select * from user where name=#{0} and password=#{1}
+    </select>
+
+    <select id="login" resultType="com.a.domain.User" >
+        select * from user where name=#{0} and password=#{1}
+    </select>
+
+    <update id="updateUser"  parameterType="com.a.domain.User" >
+        update user set name=#{new.name} , password=#{new.password} , tel=#{new.tel},
+        address=#{new.address} ,editTime=#{new.editTime}
+         where name=#{old.name} and tel= #{old.tel}
+    </update>
+    <insert id="addUser" parameterType="com.a.domain.User" >
+        insert into user (name, password, tel, address) value (#{name},#{password},#{tel},#{address})
+    </insert>
+    <delete id="delete" >
+        delete from user where name = #{0} and  tel=#{1}
+    </delete>
+</mapper>

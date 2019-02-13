@@ -1,0 +1,11 @@
+com\a\domain\T.class
+com\a\web\UserController.class
+com\a\dao\TDao.class
+com\a\dao\TMybatisTemplateDao.class
+com\a\service\UserService.class
+com\a\dao\UserDao.class
+com\a\web\LoginCommand.class
+com\a\service\TService.class
+com\a\domain\User.class
+com\a\dao\UserMybatisTemplateDao.class
+com\a\web\SecurityCode.class
